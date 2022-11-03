@@ -1,0 +1,70 @@
+
+
+ul{
+   list-style: none;
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+}
+
+body{
+   padding-top: 20px;
+}
+
+.holder_button{
+margin-bottom: 40px;
+margin-left: 20px;
+.create_page{
+   padding: 10px;
+   background-color: red;
+   border-radius: 4px;
+   font-weight: 700;
+   font-size: 20px;
+}
+}
+
+
+
+.page_holder{
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.page{
+   color: blue;
+   font-size: 36px;
+   border: 1px solid blue;
+   font-weight: 700;
+   margin-right: 15px;
+   margin-bottom: 15px;
+}
+
+
+.history{
+   max-width: 1100px;
+   margin: 0 auto;
+   max-height: 600px;
+   overflow: scroll;
+   .history_title{
+      font-size: 36px;
+      color: grey;
+   }
+
+   .history_list{
+      border: 2px solid grey;
+      padding: 10px 15px;
+      .history_item{
+         font-size: 30px;
+         margin-bottom: 10px;
+      }
+   }
+}
+
+.repeated{
+   background: yellow;
+}
+
