@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@-webkit-keyframes item_color_appearing {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 30px;
+  }
+}
+
+@keyframes item_color_appearing {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 30px;
+  }
+}
+@-webkit-keyframes color_appearing {
+  from {
+    width: 0px;
+    height: 0;
+  }
+  to {
+    width: 50px;
+    height: 50px;
+  }
+}
+@keyframes color_appearing {
+  from {
+    width: 0px;
+    height: 0;
+  }
+  to {
+    width: 50px;
+    height: 50px;
+  }
+}
+.container {
+  display: flex;
+}
+.container .left_side {
+  width: 25%;
+  height: 100vh;
+  background-color: rgb(88, 80, 80);
+  padding: 30px 0 0 15px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.container .left_side .left_side_title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+}
+.container .left_side .color_holder {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+.container .left_side .color_holder .get_color {
+  margin-right: 20px;
+}
+.container .left_side .color_holder .add_color {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.container .left_side .color_holder .reset_colors {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.container .left_side .color_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .left_side .color_list .color {
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-animation-name: color_appearing;
+          animation-name: color_appearing;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+}
+.container .color_block {
+  border: 2px solid #000;
+  box-sizing: border-box;
+  width: 600px;
+  margin: 0 auto;
+  overflow: auto;
+  scroll-behavior: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.container .color_block .item_color {
+  height: 30px;
+  width: 100%;
+  -webkit-animation-name: item_color_appearing;
+          animation-name: item_color_appearing;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}/*# sourceMappingURL=style.css.map */
