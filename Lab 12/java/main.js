@@ -52,21 +52,6 @@ if (Prev_data) {
       // Видалення елемента при натисканні на нього
       deleting_of_article();
 
-      // При натисканні додати анімацію
-
-      div.addEventListener('click', ()=>{
-         const selectedElem = document.querySelector('.select'); 
-         if(selectedElem)
-         {
-            selectedElem.classList.remove('select');
-         }
-
-         div.classList.add('select');
-
-
-      })
-
-      
 
    }); // foreach
 
@@ -181,19 +166,7 @@ const add = () => {
    input_description.value = '';
    input_content.value = '';
 
-   //При натисканні на елемент, додати анімацію
 
-      div.addEventListener('click', ()=>{
-         const selectedElem = document.querySelector('.select'); 
-         if(selectedElem)
-         {
-            selectedElem.classList.remove('select');
-         }
-
-         div.classList.add('select');
-
-
-      })
 
    
    //Додавання інформації про статтю в Local Storage
