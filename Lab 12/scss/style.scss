@@ -1,0 +1,289 @@
+
+*{
+   padding: 0;
+   margin: 0;
+}
+
+
+@keyframes appearing {
+   from{
+      top: 0px;
+      opacity: 0;
+   }
+   to{
+      top: 50%;
+      opacity: 1;
+   }
+}
+
+
+.error{
+   position: absolute;
+   box-sizing: border-box;
+   padding: 20px 15px;
+   background-color: #fff;
+   border-radius: 25px;
+   width: 300px;
+   margin: 0 auto;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   animation-name: appearing;
+   animation-duration: 0.7s;
+
+   .error_title{
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 15px;
+   }
+   .error_description{
+      font-size: 18px;
+      color: rgb(162, 165, 165);
+      margin-bottom: 25px;
+   }
+
+   .error_button{
+      background-color: #1da1f2;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-weight: 700;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      
+   }
+}
+
+@keyframes disappearing{
+   from{
+      opacity: 1;
+   }
+   to{
+      opacity: 0;
+      
+      transform-origin: 300% 50%;
+      transform: rotate(135deg);
+     
+      
+   }
+}
+
+
+.delete_eror_mesage{
+   
+   animation-duration: 2s;
+   animation-name: disappearing;
+}
+
+
+body{
+   background: radial-gradient(circle, rgba(201,19,99,1) 0%, rgba(0,11,93,1) 100%);
+   padding-top: 50px;
+   padding-bottom: 50px;
+   overflow: scroll;
+   overflow-x: hidden;
+}
+
+
+// Inputs
+
+.nav{
+   position: relative;
+   padding: 10px 10px;
+  /* max-height: 50vh;
+   border: 1px solid #000;
+   overflow: scroll;*/
+   max-width: 800px;
+   margin: 0 auto;
+   text-align: center;
+
+   .text_style{
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 18px;
+   }
+   .title{
+      margin-bottom: 20px;
+      color: #fff;
+     
+      #input_title{
+         width: 300px;
+         padding: 10px;
+         font-size: 16px;
+         border-radius: 40px;
+         font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+         background-color: transparent;  
+         color: #fff;
+         border: 2px solid #fff;
+         text-align: center;
+      }
+   }
+   .description{
+      margin-bottom: 20px;
+      color: #fff;
+      .input_description{
+         width: 600px;
+         height: 60px;
+         padding: 15px 10px;
+         font-size: 18px;
+         border-radius: 40px;
+         font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+         resize: none;
+         background-color: transparent;  
+         color: #fff;
+         border: 2px solid #fff;
+         overflow: hidden;
+      }
+   }
+   .content{
+      margin-bottom: 30px;
+      color: #fff;
+      .input_content{
+         width: 600px;
+         height: 90px;
+         font-size: 18px;
+         font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+         padding: 15px 10px;
+         border-radius: 40px;
+         resize: none;
+         background-color: transparent;  
+         color: #fff;
+         border: 2px solid #fff;
+         overflow:hidden ;
+         
+      }
+   }
+   .add_article{
+      padding: 15px 20px;
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 20px;
+      border: 0px;
+      background: radial-gradient(circle, rgba(201,19,62,1) 0%, rgba(9,19,121,1) 100%);
+      color: #fff;
+      cursor: pointer;
+      
+   }
+}
+
+
+// Container for arricles
+
+.articles{
+
+
+
+   .container{
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 40px;
+      padding: 20px;
+      box-sizing: border-box;
+   }
+
+
+   
+}
+
+
+
+
+
+
+.select{
+   transform: translateY(20px);
+}
+
+
+.article{
+
+   padding: 20px 10px 20px 10px;
+   border-radius: 10px;
+   border: 2px solid #fff;
+   color: #fff;
+   animation-name: creatingArticle;
+   animation-duration: 2s;
+   transition: 0.3s linear;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+
+   
+
+   .article_title{
+      text-align: center;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
+   }
+
+   .article_description{
+      font-size: 20px;
+      margin-bottom: 10px;
+   }
+
+   .article_content{
+      font-size: 20px;
+      margin-bottom: 20px;
+      flex:  1 1 auto;
+ 
+   }
+
+   .delete_article{
+      margin: 0 auto;
+      color: #fff;
+      width: 150px;
+      border-radius: 15px;
+      border: 0px;
+      background-color: black;
+      padding: 10px 15px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition:  0.2s linear;
+
+      &:hover{
+         background: #5B5554;
+      }
+   }
+
+
+}
+
+// a special class that is added to the div when you click delete
+
+.delete{
+   animation-name: deleting_article;
+   animation-duration: 2s ;
+}
+
+ //Animation of deleting article
+ @keyframes deleting_article{
+   from{
+      opacity: 1;
+   }
+   to{
+      transform: translateX(1500px);
+      opacity: 0;
+   }
+}
+
+// Animation of creating ariticle
+@keyframes creatingArticle{
+   from{
+      
+      opacity: 0;
+      transform: translateX(-1280px);
+   }
+
+   to{
+      
+      opacity: 1;
+   }
+} 
+
+
+
+
